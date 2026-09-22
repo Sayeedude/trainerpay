@@ -7,7 +7,7 @@ import { getPublicSupabaseAnonKey, getPublicSupabaseUrl } from "./env";
  * redirected to /login. Keep this list short and explicit rather than
  * pattern-matching, so a new route is protected-by-default.
  */
-const PUBLIC_PATHS = ["/login", "/auth/callback"];
+const PUBLIC_PATHS = ["/login", "/auth/callback", "/auth/set-password"];
 
 function isPublicPath(pathname: string): boolean {
   return PUBLIC_PATHS.some((p) => pathname === p || pathname.startsWith(`${p}/`));
